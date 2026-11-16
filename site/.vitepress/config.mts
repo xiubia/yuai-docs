@@ -7,12 +7,12 @@ export default defineConfig({
   base: "/yuai-docs/",
   cleanUrls: false,
   head: [
-    ["link", { rel: "icon", type: "image/svg+xml", href: "/yuai-docs/mark.svg" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/yuai-docs/brand/favicon.svg" }],
     ["meta", { name: "theme-color", content: "#f4f6f5", media: "(prefers-color-scheme: light)" }],
     ["meta", { name: "theme-color", content: "#101c1f", media: "(prefers-color-scheme: dark)" }],
   ],
   themeConfig: {
-    logo: "/mark.svg",
+    logo: { light: "/brand/mark.svg", dark: "/brand/mark-dark.svg", alt: "" },
     siteTitle: "yuai 文档",
     nav: [
       { text: "指南", link: "/guide/quickstart", activeMatch: "/guide/" },
