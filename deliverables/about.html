@@ -1,0 +1,279 @@
+<!-- Yuai 关于页面：完整复制本文件到后台「关于」HTML 设置。 -->
+<style>
+  .yuai-about {
+    --ya-bg: #f4f6f5;
+    --ya-ink: #152b32;
+    --ya-muted: #40555c;
+    --ya-line: #c8d4d5;
+    --ya-surface: #fcfdfb;
+    --ya-button: #142023;
+    background: var(--ya-bg);
+    color: var(--ya-ink);
+    font-family:
+      "Yuai Sans",
+      "Yuai Chinese",
+      system-ui,
+      -apple-system,
+      "Microsoft YaHei",
+      sans-serif;
+    line-height: 1.8;
+    padding: 112px 24px 64px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .dark .yuai-about {
+    --ya-bg: #101c1f;
+    --ya-ink: #e9f1ec;
+    --ya-muted: #b5c8c5;
+    --ya-line: #344c4f;
+    --ya-surface: #1a2e31;
+    --ya-button: #d9eae2;
+  }
+  .yuai-about * {
+    box-sizing: border-box;
+  }
+  .yuai-about .inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .yuai-about .eyebrow {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--ya-muted);
+    margin: 0 0 20px;
+  }
+  .yuai-about h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.25;
+    letter-spacing: -1.8px;
+    font-weight: 600;
+    margin: 0 0 22px;
+  }
+  .yuai-about .lead {
+    max-width: 710px;
+    font-size: 18px;
+    color: var(--ya-muted);
+    margin: 0 0 32px;
+  }
+  .yuai-about a {
+    color: inherit;
+    text-underline-offset: 4px;
+  }
+  .yuai-about a:hover {
+    text-decoration: underline;
+  }
+  .yuai-about a:focus-visible {
+    outline: 2px solid var(--ya-ink);
+    outline-offset: 5px;
+  }
+  .yuai-about .actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 0 56px;
+  }
+  .yuai-about .action {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid var(--ya-line);
+    border-radius: 99px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .yuai-about .primary {
+    background: var(--ya-button);
+    color: var(--ya-bg);
+    border-color: var(--ya-button);
+  }
+  .yuai-about .section {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 32px;
+    padding: 32px 0;
+    border-top: 1px solid var(--ya-line);
+  }
+  .yuai-about h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0;
+  }
+  .yuai-about p {
+    margin: 0 0 16px;
+  }
+  .yuai-about p:last-child {
+    margin-bottom: 0;
+  }
+  .yuai-about ul,
+  .yuai-about ol {
+    padding-left: 22px;
+    margin: 0;
+  }
+  .yuai-about ol {
+    list-style: decimal;
+  }
+  .yuai-about ul {
+    list-style: disc;
+  }
+  .yuai-about h1 span {
+    white-space: nowrap;
+  }
+  .yuai-about li {
+    margin: 6px 0;
+  }
+  .yuai-about .note {
+    color: var(--ya-muted);
+  }
+  .yuai-about code {
+    font-family: ui-monospace, monospace;
+    background: var(--ya-surface);
+    border: 1px solid var(--ya-line);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 0.9em;
+  }
+  .yuai-about footer {
+    border-top: 1px solid var(--ya-line);
+    padding-top: 26px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ya-muted);
+  }
+  @media (max-width: 640px) {
+    .yuai-about {
+      padding: 96px 20px 40px;
+    }
+    .yuai-about .section {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 26px 0;
+    }
+    .yuai-about .lead {
+      font-size: 17px;
+    }
+    .yuai-about .actions {
+      margin-bottom: 36px;
+    }
+  }
+</style>
+<main class="yuai-about" lang="zh-CN" id="content" tabindex="-1">
+  <div class="inner">
+    <p class="eyebrow">YUAI / 关于</p>
+    <h1>Coding Agent 的<span>模型网关</span></h1>
+    <p class="lead">
+      为 Claude Code、Codex
+      和你的应用提供统一的模型入口。使用熟悉的工具，通过兼容接口连接可用模型，在控制台管理密钥与用量。
+    </p>
+    <div class="actions">
+      <a
+        class="action primary"
+        href="https://xiubia.github.io/yuai-docs/guide/quickstart.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        >开始接入 ↗</a
+      >
+      <a class="action" href="/pricing">查看模型</a>
+    </div>
+    <section class="section">
+      <h2>从这里开始</h2>
+      <div>
+        <ol>
+          <li>登录账户，在 <a href="/keys">API 密钥</a> 中创建专用密钥。</li>
+          <li>
+            从首页复制 API 地址，按
+            <a href="https://xiubia.github.io/yuai-docs/" target="_blank" rel="noopener noreferrer"
+              >接入文档</a
+            >
+            配置工具。
+          </li>
+          <li>选择可用模型，完成一次短请求，再到 <a href="/usage-logs">使用日志</a> 核对调用。</li>
+        </ol>
+      </div>
+    </section>
+    <section class="section">
+      <h2>支持的工具</h2>
+      <div>
+        <p>
+          Claude Code、Codex CLI 与桌面端、OpenCode、Qwen Code、pi、Cline、Aider，以及使用 OpenAI 或
+          Anthropic 兼容 SDK 的应用。
+        </p>
+        <p class="note">
+          模型支持的接口、工具调用和多模态能力各不相同，以模型广场和当前账户权限为准。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2>地址与协议</h2>
+      <div>
+        <p>
+          Claude Code 使用首页 API 根地址；Codex 和 OpenAI 兼容客户端通常使用根地址加
+          <code>/v1</code>。直接发送 HTTP 请求时还需要具体接口路径。
+        </p>
+        <p class="note">
+          文档站仅提供说明。不要将文档网址填写为 API 地址，也不要重复添加 <code>/v1</code>。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2>管理用量与成本</h2>
+      <div>
+        <p>
+          按项目分配密钥，设置额度、有效期和模型限制。长任务开始前检查价格与账户可用额度，运行后查看使用日志。
+        </p>
+        <p>
+          价格、套餐、充值和订阅规则以模型广场、钱包及站点公告为准。详细操作见
+          <a
+            href="https://xiubia.github.io/yuai-docs/guide/billing.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >用量与计费</a
+          >。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2>使用帮助</h2>
+      <div>
+        <p>
+          遇到问题可先查看
+          <a
+            href="https://xiubia.github.io/yuai-docs/guide/faq.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >常见问题</a
+          >。需要反馈时，通过站点公告中的联系渠道提供客户端版本、模型、时间、请求 ID
+          和脱敏错误信息。
+        </p>
+        <p class="note">
+          请妥善保管密钥；不要在反馈、截图或公开代码中发送完整密钥。发现泄露后立即停用并更换。
+        </p>
+      </div>
+    </section>
+    <footer>
+      <p>
+        Yuai 基于
+        <a href="https://github.com/QuantumNous/new-api" target="_blank" rel="noopener noreferrer"
+          >New API</a
+        >
+        ·
+        <a href="https://github.com/QuantumNous" target="_blank" rel="noopener noreferrer"
+          >QuantumNous</a
+        >，源自
+        <a href="https://github.com/songquanpeng/one-api" target="_blank" rel="noopener noreferrer"
+          >One API</a
+        >
+        ·
+        <a href="https://github.com/songquanpeng" target="_blank" rel="noopener noreferrer"
+          >JustSong</a
+        >。New API 遵循
+        <a
+          href="https://github.com/QuantumNous/new-api/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >AGPL v3.0</a
+        >。
+      </p>
+    </footer>
+  </div>
+</main>
